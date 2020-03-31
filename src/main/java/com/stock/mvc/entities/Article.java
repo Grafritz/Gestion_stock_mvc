@@ -37,7 +37,6 @@ public class Article implements Serializable{
 	private Category category;
 	
 	
-	
 	public Article() {
 		super();
 	}

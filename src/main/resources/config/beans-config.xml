@@ -3,8 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
-		
-	<!-- Declaration des beans -->
-	<import resource="classpath:beans-config.xml"/>
-	<import resource="classpath:config/data-source-config.xml"/>
+	
+	<bean id="articleDao" class="com.stock.mvc.dao.impl.ActicleDaoImpl" />
+	<bean id="articleService" class="com.stock.mvc.services.impl.ActicleServiceImpl">
+		<property name="dao" ref="articleDao"></property>
+	</bean>
+
 </beans>
